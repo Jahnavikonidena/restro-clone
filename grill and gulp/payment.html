@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Confirmation - Grill and Gulp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f4ef;
+      color: #3e3e3e;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #5a4d41;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .order-summary, .payment-section {
+      margin-bottom: 30px;
+    }
+
+    .order-summary h2, .payment-section h2 {
+      border-bottom: 2px solid #ddd0c8;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #5a4d41;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .total-line {
+      font-weight: bold;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .confirm-btn {
+      background-color: #5a4d41;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .confirm-btn:hover {
+      background-color: #7a6c5d;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="menu-card.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Grill and Gulp - Confirm Your Order</h1>
+
+  <div class="container">
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="item"><span>Grilled Tofu with Herb Sauce (x2)</span><span>$36</span></div>
+      <div class="item"><span>Vegan Caesar Salad (x1)</span><span>$10</span></div>
+      <div class="item"><span>Classic Mojito (x2)</span><span>$24</span></div>
+
+      <div class="item total-line"><span>Subtotal</span><span>$70</span></div>
+      <div class="item"><span>Tax (5%)</span><span>$3.50</span></div>
+      <div class="item total-line"><span>Total</span><span>$73.50</span></div>
+    </div>
+
+    <div class="payment-section">
+      <h2>Payment Details</h2>
+      <label for="cardName">Cardholder Name</label>
+      <input type="text" id="cardName" placeholder="John Doe" />
+
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" />
+
+      <label for="expiry">Expiry Date</label>
+      <input type="text" id="expiry" placeholder="MM/YY" />
+
+      <label for="cvv">CVV</label>
+      <input type="number" id="cvv" placeholder="123" />
+    </div>
+
+    <button class="confirm-btn" onclick="confirmOrder()">Confirm and Pay</button>
+
+    <div class="success-message" id="successMessage">🎉 Thank you! Your vegan order has been placed successfully.</div>
+  </div>
+
+  <script>
+    function confirmOrder() {
+  const name = document.getElementById('cardName').value;
+  const number = document.getElementById('cardNumber').value;
+  const expiry = document.getElementById('expiry').value;
+  const cvv = document.getElementById('cvv').value;
+
+  if (!name || !number || !expiry || !cvv) {
+    alert("Please fill in all payment details.");
+    return;
+  }
+
+  // Display success message
+  document.getElementById('successMessage').style.display = 'block';
+
+  // Redirect to Thank You page after 2 seconds
+  setTimeout(() => {
+    window.location.href = "thankyou .html";  // Correct redirection
+  }, 2000);
+}
+
+  </script>
+
+</body>
+</html>

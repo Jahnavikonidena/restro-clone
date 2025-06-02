@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grill and Gulp - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #5a4d41; /* Soft dark brown */
+      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+      min-height: 100vh;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 244, 232, 0.75); /* Warm creamy overlay */
+      z-index: -1;
+    }
+    header {
+      background-color: #f4d9c9; /* Pale peach */
+      color: #5a4d41;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(90, 77, 65, 0.2);
+    }
+    nav {
+      background-color: #c7b299; /* Muted warm tan */
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(90, 77, 65, 0.15);
+    }
+    nav a {
+      color: #5a4d41;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #5a4d41;
+      color: #f4d9c9;
+      border-radius: 4px;
+    }
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(90, 77, 65, 0.1);
+    }
+    h1, h2 {
+      margin-bottom: 15px;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1.2px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #c7b299;
+      color: #5a4d41;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      box-shadow: 0 -2px 10px rgba(90, 77, 65, 0.1);
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Grill and Gulp</h1>
+    <p>Sizzling Bites. Signature Sips.</p>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="menu card.html">Menu</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Welcome to Grill and Gulp</h2>
+      <p>At Grill and Gulp, we bring you the perfect combination of delicious grilled dishes and refreshing drinks. Whether you're craving smoky BBQ ribs or a classic mojito, our menu is crafted to satisfy every taste bud.</p>
+      <p>Come enjoy a relaxed atmosphere, great company, and unbeatable flavors. We're your go-to spot for unforgettable food and fun times.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grill and Gulp. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

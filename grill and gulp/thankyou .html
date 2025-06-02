@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - Grill and Gulp</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f8f4ef, #e4ddd3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #5a4d41;
+    }
+
+    .thank-you-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .thank-you-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .thank-you-container p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #d17f3f;
+      font-weight: bold;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .rating-section {
+      margin: 30px 0;
+    }
+
+    .stars {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .star {
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    .star.selected {
+      color: #f5a623;
+    }
+
+    .thank-you-container a {
+      display: inline-block;
+      background-color: #5a4d41;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .thank-you-container a:hover {
+      background-color: #776553;
+    }
+
+    .rating-result {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #357a38;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-container">
+    <div class="emoji">🌱🥂</div>
+    <h1>Thank You for Your Order!</h1>
+    <p>We’re thrilled to serve you delicious vegan dishes and refreshing drinks at <span class="highlight">Grill and Gulp</span>.</p>
+    <p>Your order is being prepared with love 💚</p>
+
+    <div class="rating-section">
+      <p>Please rate your experience:</p>
+      <div class="stars" id="starRating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <div class="rating-result" id="ratingResult"></div>
+    </div>
+
+    <a href="home.html">Back to Home</a>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll('.star');
+    const result = document.getElementById('ratingResult');
+
+    // Load saved rating
+    const savedRating = localStorage.getItem('userRating');
+    if (savedRating) {
+      highlightStars(savedRating);
+      result.textContent = `You previously rated us ${savedRating} star${savedRating > 1 ? 's' : ''}.`;
+    }
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        const rating = parseInt(star.getAttribute('data-value'));
+        highlightStars(rating);
+        result.textContent = `You rated us ${rating} star${rating > 1 ? 's' : ''}. Thank you!`;
+        localStorage.setItem('userRating', rating);
+      });
+    });
+
+    function highlightStars(rating) {
+      stars.forEach(s => s.classList.remove('selected'));
+      for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('selected');
+      }
+    }
+  </script>
+
+</body>
+</html>

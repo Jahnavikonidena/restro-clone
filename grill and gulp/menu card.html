@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Card</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      color: #5a4d41;
+    }
+    nav {
+      background-color: #5a4d41;
+      padding: 15px 30px;
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d4c4b6;
+    }
+    header {
+      padding: 30px 20px 0 20px;
+      text-align: center;
+      background: #fff8f0;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      font-size: 2.8em;
+      color: #5a4d41;
+    }
+    header h2 {
+      margin-top: 8px;
+      font-weight: 400;
+      font-size: 1.4em;
+      color: #7a6c5d;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff8f0;
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(90, 77, 65, 0.15);
+    }
+    .section-container {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .section-image {
+      width: 250px;
+      height: 350px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(90, 77, 65, 0.2);
+    }
+    .category {
+      flex: 1;
+    }
+    .category h3 {
+      margin-bottom: 25px;
+      border-bottom: 2px solid #e3d5ca;
+      padding-bottom: 8px;
+      font-weight: 700;
+      font-size: 1.7em;
+      color: #5a4d41;
+    }
+    .dish {
+      border-bottom: 1px solid #e3d5ca;
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dish:last-child {
+      border-bottom: none;
+    }
+    .dish-details {
+      flex: 1;
+    }
+    .dish-name {
+      font-weight: 700;
+      font-size: 1.3em;
+      color: #5a4d41;
+    }
+    .dish-desc {
+      font-size: 1em;
+      color: #7a6c5d;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .dish-controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    select, input[type="checkbox"] {
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 4px 6px;
+      background-color: #fff;
+    }
+    label.checkbox-label {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95em;
+      user-select: none;
+    }
+    .pay-button {
+      display: inline-block;
+      background-color: #5a4d41;
+      color: #f4d9c9;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .pay-button:hover {
+      background-color: #c7b299;
+      color: #5a4d41;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#menu">Menu</a>
+  </nav>
+
+  <header>
+    <h1>Grill and Gulp</h1>
+    <h2>Vegan Menu Card</h2>
+  </header>
+
+  <main>
+
+    <!-- Vegan Dishes -->
+    <div class="section-container">
+      <img src="vegan food.jpeg" alt="Vegan Dish" class="section-image" width="50px" height="50px">
+      <section id="menu" class="category">
+        <h3>🌿 Vegan Dishes</h3>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Vegan Burger</div>
+            <div class="dish-desc">Grilled patty with lettuce, tomato, and vegan mayo on a whole grain bun.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Vegan Caesar Salad</div>
+            <div class="dish-desc">Romaine lettuce with garlic croutons and creamy cashew dressing.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Grilled Tofu Skewers</div>
+            <div class="dish-desc">Tofu and vegetables marinated in herbs and grilled to perfection.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+        <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Vegan Mac & Cheese</div>
+          <div class="dish-desc">Creamy dairy-free cheese sauce over elbow pasta.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Quinoa Stuffed Peppers</div>
+          <div class="dish-desc">Bell peppers filled with spiced quinoa, beans, and herbs.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Spicy Chickpea Wrap</div>
+          <div class="dish-desc">Whole wheat wrap filled with spicy roasted chickpeas and slaw.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+      </section>
+    </div>
+
+    <!-- Alcoholic Beverages -->
+    <div class="section-container">
+      <img src="Drinks.jpeg" alt="Alcoholic Drink" class="section-image">
+      <section class="category">
+        <h3>🍹 Alcoholic Beverages</h3>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Vegan Mojito</div>
+            <div class="dish-desc">Fresh lime, mint, cane sugar, and vegan white rum topped with soda.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Plant-Based Piña Colada</div>
+            <div class="dish-desc">Coconut cream, pineapple juice, and vegan dark rum over ice.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Vegan Wine</div>
+            <div class="dish-desc">Red or white wine produced without animal by-products.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+        <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Vegan Margarita</div>
+          <div class="dish-desc">Lime juice, agave, orange liqueur, and vegan tequila.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Vegan Sangria</div>
+          <div class="dish-desc">Red wine with fresh fruits and vegan sweetener.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Vegan Whiskey Sour</div>
+          <div class="dish-desc">Vegan whiskey, lemon juice, and aquafaba for foam.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      </section>
+    </div>
+
+    <!-- Desserts -->
+    <div class="section-container">
+      <img src="Dessert.jpg" alt="Dessert" class="section-image">
+      <section class="category">
+        <h3>🍰 Desserts</h3>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Vegan Chocolate Cake</div>
+            <div class="dish-desc">Rich chocolate flavor made with almond milk and cocoa.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Coconut Mango Pudding</div>
+            <div class="dish-desc">Creamy coconut base with fresh mango chunks.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+
+        <div class="dish">
+          <div class="dish-details">
+            <div class="dish-name">Vegan Berry Cheesecake</div>
+            <div class="dish-desc">Cashew-based cheesecake topped with fresh berries.</div>
+          </div>
+          <div class="dish-controls">
+            <label class="checkbox-label"><input type="checkbox" /> Select</label>
+            <select><option>1</option><option>2</option><option>3</option></select>
+          </div>
+        </div>
+        <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Almond Milk Ice Cream</div>
+          <div class="dish-desc">Creamy frozen treat made with almond milk and vanilla.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Vegan Apple Crumble</div>
+          <div class="dish-desc">Baked apples topped with oat and nut crumble.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+      <div class="dish">
+        <div class="dish-details">
+          <div class="dish-name">Choco-Avocado Mousse</div>
+          <div class="dish-desc">Rich, creamy mousse made with avocado and cocoa.</div>
+        </div>
+        <div class="dish-controls">
+          <label class="checkbox-label"><input type="checkbox" /> Select</label>
+          <select><option>1</option><option>2</option><option>3</option></select>
+        </div>
+      </div>
+
+
+      </section>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="payment.html" class="pay-button">Proceed to Pay</a>
+    </div>
+
+  </main>
+</body>
+</html>
